@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Container, Content, Text } from 'native-base';
+import FooterTabs from '../components/Footer';
 
 export default class SettingsView extends Component {
+  constructor(props) {
+    super(props);
+
+    console.log(`Settings ${this.props}`);
+  }
+
   render() {
     return (
-      <View style={styles.view}>
-        <Text>Settings!</Text>
-      </View>
+      <Container style={{ paddingTop: 20 }}>
+        <Content>
+          <Text>Settings</Text>
+        </Content>
+        <FooterTabs />
+      </Container>
     );
   }
 }

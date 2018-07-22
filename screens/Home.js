@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Container, Content, Text } from 'native-base';
+import FooterTabs from '../components/Footer';
 
 export default class HomeView extends Component {
+  constructor(props) {
+    super(props);
+
+    console.log(`Home ${this.props}`);
+  }
+
   render() {
     return (
-      <View style={styles.view}>
-        <Text>Home!</Text>
-      </View>
+      <Container style={{ paddingTop: 20 }}>
+        <Content padder>
+          <Text>Home</Text>
+        </Content>
+        <FooterTabs />
+      </Container>
     );
   }
 }
@@ -15,6 +26,7 @@ const styles = StyleSheet.create({
   view: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingTop: 20
   }
 });
