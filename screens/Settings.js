@@ -6,8 +6,6 @@ import FooterTabs from '../components/Footer';
 export default class SettingsView extends Component {
   constructor(props) {
     super(props);
-
-    console.log(`Settings ${this.props}`);
   }
 
   render() {
@@ -16,16 +14,10 @@ export default class SettingsView extends Component {
         <Content>
           <Text>Settings</Text>
         </Content>
-        <FooterTabs />
+        <FooterTabs navigation={this.props.navigation} />
       </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  view: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
+const styles = StyleSheet.create({});

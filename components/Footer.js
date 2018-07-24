@@ -5,19 +5,18 @@ import { createStackNavigator } from 'react-navigation';
 export default class FooterTabs extends Component {
   constructor(props) {
     super(props);
-
-    console.log(`Footer ${this.props}`);
   }
 
   render() {
     return (
       <Footer>
         <FooterTab style={styles.footer}>
-          <Button onPress={() => this.props.navigation.navigate('Home')}>
+          <Button onPress={() =>
+            this.props.navigation.navigate('Home') }>
             <Icon name="ios-list-box-outline" />
             <Text style={styles.textStyle}>Home</Text>
           </Button>
-          <Button onPress={() => this.props.navigation.navigate('Settings')}>
+          <Button onPress={() => this.props.navigation.navigate('Settings') }>
             <Icon name="ios-add-circle-outline" />
             <Text style={styles.textStyle}>Transactions</Text>
           </Button>

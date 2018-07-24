@@ -7,7 +7,7 @@ export default class HomeView extends Component {
   constructor(props) {
     super(props);
 
-    console.log(`Home ${this.props}`);
+    console.log(props);
   }
 
   render() {
@@ -16,17 +16,10 @@ export default class HomeView extends Component {
         <Content padder>
           <Text>Home</Text>
         </Content>
-        <FooterTabs />
+        <FooterTabs navigation={this.props.navigation} />
       </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  view: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 20
-  }
-});
+const styles = StyleSheet.create({});
