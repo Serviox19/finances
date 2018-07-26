@@ -16,7 +16,7 @@ export default class FooterTabs extends Component {
             <Icon name="ios-list-box-outline" />
             <Text style={styles.textStyle}>Home</Text>
           </Button>
-          <Button onPress={() => this.props.navigation.navigate('Settings') }>
+          <Button onPress={() => this.props.navigation.navigate('Trans') }>
             <Icon name="ios-add-circle-outline" />
             <Text style={styles.textStyle}>Transactions</Text>
           </Button>
@@ -33,6 +33,6 @@ const styles = {
   },
   textStyle: {
     fontSize: 12,
-    color: '#000'
+    color: '#000000'
   }
 }

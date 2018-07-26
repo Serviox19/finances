@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { Container, Content, Body,
-  Header, Title, Text } from 'native-base';
+Header, Title, Text } from 'native-base';
 
-export default class HomeScreen extends Component {
+export default class TransactionScreen extends Component {
   constructor(props) {
     super(props);
-
-    console.log(props);
   }
 
   render() {
@@ -15,12 +13,12 @@ export default class HomeScreen extends Component {
       <React.Fragment>
         <Header>
           <Body>
-            <Title>Home</Title>
+            <Title>Transactions</Title>
           </Body>
         </Header>
         <Container style={{ paddingTop: 20 }}>
           <Content padder>
-            <Text>Home</Text>
+            <Text>Transactions Screen</Text>
           </Content>
         </Container>
       </React.Fragment>

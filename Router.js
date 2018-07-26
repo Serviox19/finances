@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
-import Home from './screens/Home';
-import Settings from './screens/Settings';
+import { createBottomTabNavigator } from 'react-navigation';
+import HomeScreen from './screens/Home';
+import TransactionScreen from './screens/Transactions';
+import FooterTabs from './components/Footer';
 
 
 export default class Router extends Component {
   render() {
-    const RootStack = createStackNavigator({
-      Home: { screen: Home },
-      Settings: { screen: Settings }
-    });
+    const RootStack = createBottomTabNavigator({
+      Home: { screen: HomeScreen },
+      Trans: { screen: TransactionScreen }
+    },{ tabBarComponent: FooterTabs });
 
     return (
       <RootStack />
