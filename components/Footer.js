@@ -13,11 +13,11 @@ export default class FooterTabs extends Component {
         <FooterTab style={styles.footer}>
           <Button onPress={() =>
             this.props.navigation.navigate('Home') }>
-            <Icon name="ios-list-box-outline" />
+            <Icon name="ios-home-outline" />
             <Text style={styles.textStyle}>Home</Text>
           </Button>
           <Button onPress={() => this.props.navigation.navigate('Trans') }>
-            <Icon name="ios-add-circle-outline" />
+            <Icon name="ios-list-outline" />
             <Text style={styles.textStyle}>Transactions</Text>
           </Button>
         </FooterTab>

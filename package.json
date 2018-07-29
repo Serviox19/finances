@@ -3,13 +3,20 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "expo": "^28.0.0",
+    "expo": "^28.0.1",
+    "native-base": "*",
     "react": "*",
     "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
+    "react-navigation": "^2.9.3",
     "react-redux": "^5.0.7",
+    "realm": "^2.14.0",
     "redux": "^4.0.0",
-    "react-navigation": "*",
-    "redux-thunk": "*",
-    "native-base": "*"
+    "redux-thunk": "*"
+  },
+  "devDependencies": {
+    "react-devtools": "^3.2.3"
+  },
+  "scripts": {
+    "devtools": "react-devtools"
   }
 }
