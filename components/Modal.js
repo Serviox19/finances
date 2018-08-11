@@ -3,7 +3,7 @@ import { Alert, View, Modal, TouchableOpacity } from 'react-native';
 import { Container, Content, Body,
   Header, Icon, Title, Text } from 'native-base';
 
-export const ModalComponent = ({ modalVisible, toggleModal }) => {
+export const ModalComponent = ({ children, modalVisible, toggleModal }) => {
   return (
     <Container style={{ paddingTop: 15 }}>
       <Content padder>
@@ -14,6 +14,7 @@ export const ModalComponent = ({ modalVisible, toggleModal }) => {
         >
           <Container style={{ paddingTop: 15 }}>
             <View style={styles.closeView}>
+              {/* Close Btn */}
               <TouchableOpacity
                 onPress={toggleModal}>
                 <Icon name='ios-close'
@@ -21,7 +22,7 @@ export const ModalComponent = ({ modalVisible, toggleModal }) => {
               </TouchableOpacity>
             </View>
             <Content padder>
-              <Text>Modal</Text>
+              {children}
             </Content>
           </Container>
         </Modal>
@@ -31,13 +32,9 @@ export const ModalComponent = ({ modalVisible, toggleModal }) => {
 }
 
 const styles = {
-  modalContainer: {
-    marginTop: 25,
-    flexDirection: 'column',
-  },
   closeView: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    marginRight: 25
+    marginRight: 20
   }
 }

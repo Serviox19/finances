@@ -13,19 +13,11 @@ export default class TransactionScreen extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    // console.log(nextProps);
-    if (typeof nextProps.toggleModal === 'function') {
-      this.setModalVisible(!this.state.modalVisible);
-    }
-  }
-
   toggleModal() {
     this.setState({ modalVisible: !this.state.modalVisible });
   }
 
   render() {
-    const _this = this;
     return (
       <React.Fragment>
         <Header>
@@ -48,8 +40,9 @@ export default class TransactionScreen extends Component {
             <Text>Transactions Screen</Text>
             <ModalComponent
               modalVisible={this.state.modalVisible}
-              toggleModal={() => this.toggleModal(!this.state.modalVisible)}
-            />
+              toggleModal={() => this.toggleModal(!this.state.modalVisible)}>
+              <Text>Modal Content in Transactions View</Text>
+            </ModalComponent>
           </Content>
         </Container>
       </React.Fragment>
