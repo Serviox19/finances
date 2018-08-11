@@ -3,6 +3,7 @@ import { AlertIOS, StyleSheet, TouchableHighlight } from 'react-native';
 import { Container, Content, Body,
 Button, Header, Left, Title, Text, Right, Icon } from 'native-base';
 import { ModalComponent } from '../components/Modal';
+import ExpensesForm from '../components/ExpensesForm';
 
 export default class TransactionScreen extends Component {
   constructor(props) {
@@ -41,7 +42,8 @@ export default class TransactionScreen extends Component {
             <ModalComponent
               modalVisible={this.state.modalVisible}
               toggleModal={() => this.toggleModal(!this.state.modalVisible)}>
-              <Text>Modal Content in Transactions View</Text>
+              <Text style={{ textAlign: 'center' }}>Please enter an Expense or Purchase</Text>
+              <ExpensesForm />
             </ModalComponent>
           </Content>
         </Container>
