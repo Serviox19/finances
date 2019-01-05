@@ -11,6 +11,11 @@ export default class FooterTabs extends Component {
     return (
       <Footer>
         <FooterTab style={styles.footer}>
+        <Button onPress={() =>
+          this.props.navigation.navigate('') }>
+          <Icon name="ios-home-outline" />
+          <Text style={styles.textStyle}>Calendar</Text>
+        </Button>
           <Button onPress={() =>
             this.props.navigation.navigate('Home') }>
             <Icon name="ios-home-outline" />
@@ -18,7 +23,7 @@ export default class FooterTabs extends Component {
           </Button>
           <Button onPress={() => this.props.navigation.navigate('Trans') }>
             <Icon name="ios-list-outline" />
-            <Text style={styles.textStyle}>Transactions</Text>
+            <Text style={styles.textStyle}>Categories</Text>
           </Button>
         </FooterTab>
       </Footer>

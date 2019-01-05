@@ -42,7 +42,7 @@ export default class TransactionScreen extends Component {
             <ModalComponent
               modalVisible={this.state.modalVisible}
               toggleModal={() => this.toggleModal(!this.state.modalVisible)}>
-              <Text style={{ textAlign: 'center' }}>Please enter an Expense or Purchase</Text>
+              <Text style={{ textAlign: 'center', marginBottom: 15 }}>Please enter an Expense or Purchase</Text>
               <ExpensesForm />
             </ModalComponent>
           </Content>

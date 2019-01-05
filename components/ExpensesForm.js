@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Content, DatePicker, Form, Item, Input, Label, Text } from 'native-base';
+import { View } from 'react-native';
+import { Button, Container, Content, DatePicker, Form, Item, Input, Label, Text } from 'native-base';
 import moment from 'moment';
 
 export default class ExpensesForm extends Component {
@@ -13,7 +14,9 @@ export default class ExpensesForm extends Component {
   }
 
   setDate(newDate) {
-    this.setState({ chosenDate: newDate });
+    const formatted = moment(newDate).format('MMMM Do YYYY');
+    console.log(formatted);
+    this.setState({ chosenDate: formatted });
   }
 
   render() {
@@ -35,8 +38,6 @@ export default class ExpensesForm extends Component {
             </Item>
             <Item fixedLabel>
               <Label>Date</Label>
-              <Text>{moment(this.state.chosenDate).format('MMMM Do YYYY')}
-              </Text>
               <DatePicker
               style={{ textAlign: 'center', float: 'left' }}
               defaultDate={new Date()}
@@ -45,15 +46,32 @@ export default class ExpensesForm extends Component {
               modalTransparent={false}
               animationType={"fade"}
               androidMode={"default"}
-              placeHolderText="Select date"
+              placeHolderText={moment(this.state.chosenDate).format('MMMM Do YYYY')}
               textStyle={{ color: "green" }}
               placeHolderTextStyle={{ color: "#d3d3d3" }}
               onDateChange={this.setDate}
               />
             </Item>
+            <View style={styles.buttonView}>
+              <Button block light style={styles.firstButton}>
+                <Text>Clear Form</Text>
+              </Button>
+              <Button block light>
+                <Text>Add</Text>
+              </Button>
+            </View>
           </Form>
         </Content>
       </Container>
     );
+  }
+}
+
+const styles = {
+  buttonView: {
+    marginTop: 50,
+  },
+  firstButton: {
+    marginBottom: 10
   }
 }
