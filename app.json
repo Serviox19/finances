@@ -1,11 +1,13 @@
 {
   "expo": {
-    "name": "finance-app",
-    "description": "This project is really great.",
-    "slug": "finance-app",
+    "name": "finance-app-2.0",
+    "slug": "finance-app-2.0",
     "privacy": "public",
-    "sdkVersion": "28.0.0",
-    "platforms": ["ios", "android"],
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

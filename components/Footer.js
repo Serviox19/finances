@@ -12,7 +12,7 @@ export default class FooterTabs extends Component {
       <Footer>
         <FooterTab style={styles.footer}>
         <Button onPress={() =>
-          this.props.navigation.navigate('') }>
+          this.props.navigation.navigate('Cal') }>
           <Icon name="ios-home-outline" />
           <Text style={styles.textStyle}>Calendar</Text>
         </Button>
