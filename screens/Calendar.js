@@ -19,8 +19,8 @@ export default class CalendarScreen extends Component {
         </Header>
         <Container style={{ paddingTop: 15 }}>
           <Content padder>
-            <Text>Calendar Component Goes here</Text>
-            <Text>With List View Under</Text>
+            <Text style={{ textAlign: 'center' }}>Calendar Component Goes here</Text>
+            <Text style={{ textAlign: 'center' }}>With List View Under</Text>
           </Content>
         </Container>
       </React.Fragment>

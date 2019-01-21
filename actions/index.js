@@ -7,6 +7,7 @@ export const transFetch = () => {
     axios.get('https://shrouded-scrubland-99138.herokuapp.com/api/trans')
       .then(response => {
         const data = response.data;
+        console.log(`Data: ${data}`);
         dispatch({ type: TRANS_FETCH, payload: data });
       })
       .catch((error) => {

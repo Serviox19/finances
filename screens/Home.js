@@ -21,7 +21,7 @@ export default class HomeScreen extends Component {
         </Header>
         <Container style={{ paddingTop: 15 }}>
           <Content padder>
-            <Text>Home</Text>
+            <Text style={{ textAlign: 'center', marginBottom: 20 }}>Header Here With Quick Overview!</Text>
             <TransList />
           </Content>
         </Container>

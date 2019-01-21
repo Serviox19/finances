@@ -34,9 +34,6 @@ class TransList extends Component {
   render() {
     return (
       <React.Fragment>
-        <View>
-          <Text>Transaction List</Text>
-        </View>
         <ListView
           enableEmptySections
           dataSource={this.dataSource}
@@ -47,9 +44,7 @@ class TransList extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
 
 const mapStateToProps = ({ trans }) => {
   return trans;

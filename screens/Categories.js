@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Header, Container, Content, Body } from 'native-base';
+import { Header, Container, Content, Body, Text, Title } from 'native-base';
 
 export default class CategoryScreen extends Component {
   constructor(props) {
@@ -10,10 +10,14 @@ export default class CategoryScreen extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header></Header>
-        <Container>
+        <Header>
+          <Body>
+            <Title>Categories</Title>
+          </Body>
+        </Header>
+        <Container style={{ paddingTop: 20 }}>
           <Content>
-            <Text>Add bar graph for each category and trans.</Text>
+            <Text style={{ textAlign: 'center' }}>Add bar graph for each category and trans.</Text>
           </Content>
         </Container>
       </React.Fragment>
